@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 float getMax(float a, float b) {
-  if(a >= b) {
+/*  if(a >= b) {
     return a;
   } else {
     return b;
-  }
+  } */
+  retrun (a >= b) ? a : b;
 }
 
 void sayHi(void) {
