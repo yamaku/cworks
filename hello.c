@@ -2,6 +2,7 @@
 
 int main (int argc, char **argv)
 {
-    printf("HelloWorld\n");
-    return(0);
+    int m = 4, d =25;
+    printf("%d ~@%d@= %d‚Å‚·\a\n", m, d, m*d);
+    return 0;
 }
