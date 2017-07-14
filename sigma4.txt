@@ -1,0 +1,6 @@
+Ku@DESKTOP-6PCH3E7:/mnt/c/Users/ku/cworks$ time ./sigma4
+299998
+
+real    0m0.016s
+user    0m0.000s
+sys     0m0.016s

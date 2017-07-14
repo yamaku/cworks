@@ -1,0 +1,2 @@
+C:\Users\ku\cworks>ifok.exe
+False
