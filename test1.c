@@ -15,17 +15,17 @@ int main(int argc, char *argv[]) {
       break;
     }
     if (strlen(a)>5||strlen(b)>5) {
-      printf("Œ…”‚ª‘å‚«‚·‚¬‚Ü‚·\n");
+      printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å‚«ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½\n");
       continue;
     }
     if(d == 0){
-      printf("0‚Å‚ÍŠ„‚ê‚Ü‚¹‚ñ\n");
+      printf("0ï¿½Å‚ÍŠï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½\n");
       continue;
     }
     c = atoi(a);
     d = atoi(b);
-    printf("¤=%d,—]‚è=%d\n",a/b,a%b);
-    printf("%d€%d=%.2f",c,d,(float)c/d);
+    printf("ï¿½ï¿½=%d,ï¿½]ï¿½ï¿½=%d\n",a/b,a%b);
+    printf("%dï¿½ï¿½%d=%.2f",c,d,(float)c/d);
   }
   return 0;
 }

@@ -6,7 +6,7 @@ int main(int argc, char const *argv[]) {
 
   for(i = 0;i < 10;i++){
     for(j = 0;j < 10;j++){
-      printf("a[%d][%d]‚ÌƒAƒhƒŒƒX‚Í%p\n", j, i, &a[j][i]);
+      printf("a[%d][%d]ï¿½ÌƒAï¿½hï¿½ï¿½ï¿½Xï¿½ï¿½%p\n", j, i, &a[j][i]);
     }
   }
 

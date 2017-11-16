@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]) {
   long n;
   srand((unsigned)time(NULL));
   double x,y,pi;
-  printf("”­¶‚³‚¹‚é—”‚ğ“ü—Í\n" );
+  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½é—ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n" );
   scanf("%ld",&n);
   for(j=0;j<20;j++){
     a=0;

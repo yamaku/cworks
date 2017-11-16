@@ -1,31 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h> //ƒwƒbƒ_‚Ìæ‚è‚İ
+#include <string.h> //ï¿½wï¿½bï¿½_ï¿½Ìï¿½ï¿½èï¿½ï¿½
 int main(int argc, char *argv[]) {
   char a[10];
   char b[10];
   int c,d;
   char e[] = "quit";
 
-  while(1){ //0‚ğ1
-    gets(a); //scanf‚ª‚æ‚­‚í‚©‚ç‚È‚¢‚Ì‚Ågets‚É‚µ‚Ü‚µ‚½
+  while(1){ //0ï¿½ï¿½1
+    gets(a); //scanfï¿½ï¿½ï¿½æ‚­ï¿½í‚©ï¿½ï¿½ï¿½È‚ï¿½ï¿½Ì‚ï¿½getsï¿½É‚ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½
     gets(b);
 
     if(strcmp(a,e)==0||strcmp(b,e)==0){
       break;
     }
     if (strlen(a)>5||strlen(b)>5) {
-      printf("Œ…”‚ª‘å‚«‚·‚¬‚Ü‚·\n");
+      printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å‚«ï¿½ï¿½ï¿½ï¿½ï¿½Ü‚ï¿½\n");
       continue;
     }
     if(d == 0){
-      printf("0‚Å‚ÍŠ„‚ê‚Ü‚¹‚ñ\n");
+      printf("0ï¿½Å‚ÍŠï¿½ï¿½ï¿½ï¿½Ü‚ï¿½ï¿½ï¿½\n");
       continue;
     }
     c = atoi(a);
     d = atoi(b);
-    printf("¤=%d,—]‚è=%d\n",c/d,c%d);
-    printf("%d€%d=%.2f\n",c,d,(float)c/d); //\n‚ğ’Ç‰Á
+    printf("ï¿½ï¿½=%d,ï¿½]ï¿½ï¿½=%d\n",c/d,c%d);
+    printf("%dï¿½ï¿½%d=%.2f\n",c,d,(float)c/d); //\nï¿½ï¿½ï¿½Ç‰ï¿½
   }
   return 0;
 }

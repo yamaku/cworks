@@ -17,14 +17,14 @@ void graph(int x)
 
 int main(int argc, char const *argv[])
 {
-  printf("‚Æ‚à‚â‚ñ‚Ì‹­‚³\n");
-  printf("UŒ‚—Í:");
+  printf("ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½\n");
+  printf("ï¿½Uï¿½ï¿½ï¿½ï¿½:");
   graph(15);
 
-  printf("–hŒä—Í:");
+  printf("ï¿½hï¿½ï¿½ï¿½ï¿½:");
   graph(12);
 
-  printf("‘f‘‚³:");
+  printf("ï¿½fï¿½ï¿½ï¿½ï¿½:");
   graph(19);
 
   return 0;

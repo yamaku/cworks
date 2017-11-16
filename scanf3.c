@@ -4,11 +4,11 @@ int main(int argc, char const *argv[]) {
   int a,b;
   char s[100];
   while (1) {
-    printf("”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
+    printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
     b = scanf("%d",&a);
     if(b == 1)break;
     scanf("%s",s);
   }
-  printf("“ü—Í‚³‚ê‚½”‚Í%d‚Å‚·\n",a);
+  printf("ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ï¿½%dï¿½Å‚ï¿½\n",a);
   return 0;
 }

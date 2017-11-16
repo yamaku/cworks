@@ -7,8 +7,8 @@ int main(void)
   value = 10;
   value2 = 20;
   printf("Hello\nWorld!\n");
-  printf("%d–œ‰~\n",100 );
+  printf("%dï¿½ï¿½ï¿½~\n",100 );
   printf("%d+%d=%d\n",100,200,100+200 );
-  printf("%dl+%dl=%dl\n",value,value2,value + value2 );
+  printf("%dï¿½l+%dï¿½l=%dï¿½l\n",value,value2,value + value2 );
   return 0;
 }

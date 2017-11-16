@@ -3,6 +3,6 @@
 int main (int argc, char **argv)
 {
     int m = 4, d =25;
-    printf("%d ~@%d@= %d‚Å‚·\a\n", m, d, m*d);
+    printf("%d ï¿½~ï¿½@%dï¿½@= %dï¿½Å‚ï¿½\a\n", m, d, m*d);
     return 0;
 }

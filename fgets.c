@@ -3,8 +3,8 @@
 
 int main(int argc, char const *argv[]) {
   char s[15];
-  printf("”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢\n");
+  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í‚ï¿½ï¿½Ä‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
   fgets(s,sizeof(s),stdin);
-  printf("“ü—Í‚³‚ê‚½”‚Í%d‚Å‚·\n",atoi(s));
+  printf("ï¿½ï¿½ï¿½Í‚ï¿½ï¿½ê‚½ï¿½ï¿½ï¿½ï¿½%dï¿½Å‚ï¿½\n",atoi(s));
   return 0;
 }

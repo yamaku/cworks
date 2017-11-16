@@ -3,7 +3,7 @@
 
 int main(int argc, char **argv) {
   char s[100];
-  strcpy(s, "¡‚Í‰J‚ª~‚è‚Ü‚·");
+  strcpy(s, "ï¿½ï¿½ï¿½Í‰Jï¿½ï¿½ï¿½~ï¿½ï¿½ï¿½Ü‚ï¿½");
   printf("%s\n", s);
   printf("%c\n", s[5]);
 

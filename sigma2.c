@@ -5,7 +5,7 @@ int main(int argc, char const *argv[]) {
   n = 1;
   for(i=0;i<10;i++){
     printf("%d,",n);
-    n += 3;  
+    n += 3;
   }
   printf("%d\n",n);
   return 0;

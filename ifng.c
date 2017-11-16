@@ -5,7 +5,7 @@ int main(int argc, char const *argv[]) {
   a = 1;
   b = 0;
   c = 0;
-  if(a == 0 && b == 0 || c == 0) printf("True\n");//a=0‚©‚ÂAb=0‚Ü‚½‚Íc=0‚Ì‚Æ‚«True
-  else printf("False\n");                         //‚Æ•\¦‚µ‚½‚¢(a‚Í•K‚¸0)
+  if(a == 0 && b == 0 || c == 0) printf("True\n");//a=0ï¿½ï¿½ï¿½ÂAb=0ï¿½Ü‚ï¿½ï¿½ï¿½c=0ï¿½Ì‚Æ‚ï¿½True
+  else printf("False\n");                         //ï¿½Æ•\ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(aï¿½Í•Kï¿½ï¿½0)
   return 0;
 }

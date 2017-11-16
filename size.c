@@ -2,13 +2,13 @@
 
 int main(void){
 
-  printf("[•W€•„†•t‚«®”Œ^]\nsigned charŒ^:%zuƒoƒCƒg\nintŒ^:%zuƒoƒCƒg\n"
-         "shortŒ^:%zuƒoƒCƒg\nlongŒ^:%zuƒoƒCƒg\nlong longŒ^:%zuƒoƒCƒg\n\n",sizeof(signed char),sizeof(int),sizeof(short),sizeof(long),sizeof(long long));
+  printf("[ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½tï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^]\nsigned charï¿½^:%zuï¿½oï¿½Cï¿½g\nintï¿½^:%zuï¿½oï¿½Cï¿½g\n"
+         "shortï¿½^:%zuï¿½oï¿½Cï¿½g\nlongï¿½^:%zuï¿½oï¿½Cï¿½g\nlong longï¿½^:%zuï¿½oï¿½Cï¿½g\n\n",sizeof(signed char),sizeof(int),sizeof(short),sizeof(long),sizeof(long long));
 
-  printf("[•W€•„†‚È‚µ®”Œ^]\nunsigned charŒ^:%zuƒoƒCƒg\nunsigned intŒ^:%zuƒoƒCƒg\n"
-         "unsigned shortŒ^:%zuƒoƒCƒg\nunsigned longŒ^:%zuƒoƒCƒg\nunsigned long longŒ^:%zuƒoƒCƒg\n\n",sizeof(unsigned char),sizeof(unsigned int),sizeof(unsigned short),sizeof(unsigned long),sizeof(unsigned long long));
+  printf("[ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½^]\nunsigned charï¿½^:%zuï¿½oï¿½Cï¿½g\nunsigned intï¿½^:%zuï¿½oï¿½Cï¿½g\n"
+         "unsigned shortï¿½^:%zuï¿½oï¿½Cï¿½g\nunsigned longï¿½^:%zuï¿½oï¿½Cï¿½g\nunsigned long longï¿½^:%zuï¿½oï¿½Cï¿½g\n\n",sizeof(unsigned char),sizeof(unsigned int),sizeof(unsigned short),sizeof(unsigned long),sizeof(unsigned long long));
 
-  printf("[À•‚“®¬”“_Œ^]\nfloatŒ^:%zuƒoƒCƒg\ndoubleŒ^:%zuƒoƒCƒg\nlong doubleŒ^:%zuƒoƒCƒg\n",sizeof(float),sizeof(double),sizeof(long double));
+  printf("[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½^]\nfloatï¿½^:%zuï¿½oï¿½Cï¿½g\ndoubleï¿½^:%zuï¿½oï¿½Cï¿½g\nlong doubleï¿½^:%zuï¿½oï¿½Cï¿½g\n",sizeof(float),sizeof(double),sizeof(long double));
 
   return 0;
 }

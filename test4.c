@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> //ƒwƒbƒ_‚Ìæ‚è‚İ
+#include <stdlib.h> //ï¿½wï¿½bï¿½_ï¿½Ìï¿½ï¿½èï¿½ï¿½
 int main(int argc, char  *argv[]) {
   int i,a,b;
   i = 0;
@@ -18,6 +18,6 @@ int main(int argc, char  *argv[]) {
     }
     b++;
   }
-  printf("%d‰ñ–Ú‚Å3‰ñ˜A‘±6‚ªo‚Ü‚µ‚½\n",b);
+  printf("%dï¿½ï¿½ï¿½Ú‚ï¿½3ï¿½ï¿½ï¿½Aï¿½ï¿½6ï¿½ï¿½ï¿½oï¿½Ü‚ï¿½ï¿½ï¿½\n",b);
   return 0;
 }

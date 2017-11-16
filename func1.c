@@ -2,20 +2,20 @@
 
 int main(int argc, char const *argv[]) {
   int i;
-  printf("‚Æ‚à‚â‚ñ‚Ì‹­‚³\n");
-  printf("UŒ‚—Í:");
+  printf("ï¿½Æ‚ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì‹ï¿½ï¿½ï¿½\n");
+  printf("ï¿½Uï¿½ï¿½ï¿½ï¿½:");
   for (i = 0; i < 15; i++) {
     printf("*");
   }
   printf("\n");
 
-  printf("–hŒä—Í:");
+  printf("ï¿½hï¿½ï¿½ï¿½ï¿½:");
   for (i = 0; i < 12; i++) {
     printf("*");
   }
   printf("\n");
 
-  printf("‘f‘‚³:");
+  printf("ï¿½fï¿½ï¿½ï¿½ï¿½:");
   for (i = 0; i < 19; i++) {
     printf("*");
   }
