@@ -18,7 +18,7 @@
 #define KITA 0
 
 char map[100][100];
-int  size;
+int size;
 
 void make_map()
 {
@@ -322,7 +322,7 @@ int player_move(char command[], int length)
         {
             switch (vector)
             {
-              case HIGASHI:
+            case HIGASHI:
                 k++;
 
                 if(map[j][k] == KABE)
@@ -331,7 +331,7 @@ int player_move(char command[], int length)
                 }
 
                 break;
-              case MINAMI:
+            case MINAMI:
                 j++;
 
                 if(map[j][k] == KABE)
@@ -340,7 +340,7 @@ int player_move(char command[], int length)
                 }
 
                 break;
-              case NISHI:
+            case NISHI:
                 k--;
 
                 if(map[j][k] == KABE)
@@ -349,7 +349,7 @@ int player_move(char command[], int length)
                 }
 
                 break;
-              case KITA:
+            case KITA:
                 j--;
 
                 if(map[j][k] == KABE)
@@ -364,7 +364,7 @@ int player_move(char command[], int length)
         {
             switch (vector)
             {
-              case HIGASHI:
+            case HIGASHI:
                 k--;
 
                 if(map[j][k] == KABE)
@@ -373,7 +373,7 @@ int player_move(char command[], int length)
                 }
 
                 break;
-              case MINAMI:
+            case MINAMI:
                 j--;
 
                 if(map[j][k] == KABE)
@@ -382,7 +382,7 @@ int player_move(char command[], int length)
                 }
 
                 break;
-              case NISHI:
+            case NISHI:
                 k++;
 
                 if(map[j][k] == KABE)
@@ -391,7 +391,7 @@ int player_move(char command[], int length)
                 }
 
                 break;
-              case KITA:
+            case KITA:
                 j++;
 
                 if(map[j][k] == KABE)
@@ -427,15 +427,24 @@ int player_move(char command[], int length)
                 {
                     if(map[a][b] == WARP)
                     {
-                        if((a != j) && (b != k) )
+                        if(a == j)
+                        {
+                            if(b == k)
+                            {
+                                continue;
+                            }
+                            else
+                            {
+                                j = a;
+                                k = b;
+                                break;
+                            }
+                        }
+                        else
                         {
                             j = a;
                             k = b;
                             break;
-                        }
-                        else
-                        {
-                            continue;
                         }
                     }
                 }
@@ -472,7 +481,7 @@ int player_move(char command[], int length)
 
 int main(int argc, char** argv)
 {
-    int  length, i, j, a, b, level;
+    int length, i, j, a, b, level;
     char repeat[10], title[17] = "Treasure Get Game", input[15];
 
     system("clear");
