@@ -65,7 +65,6 @@ void Display(void)
 
 void Reshape(int w, int h)
 {
-  printf("Windowの幅%d, 高さ%d\n",w,h);
   glViewport(0,0,w,h);
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
