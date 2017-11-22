@@ -23,10 +23,10 @@ int main(int argc,char **argv)
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
-	glTexEnvf(GL_TEXTURE_ENV,GL_TEXTURE_ENX_MODE,GL_MODULATE);
+	glTexEnvf(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
 
-	img1 = pngBind("yama.png",PNG_MOMIPMAP,PNG_ALPHA,&info1,GL_CLAMP,GL_NEAREST,GL_NEAREST);
-	img2 = pngBind("da.png",PNG_MOMIPMAP,PNG_ALPHA,&info2,GL_CLAMP,GL_NEAREST,GL_NEAREST);
+	img1 = pngBind("yama.png",PNG_NOMIPMAP,PNG_ALPHA,&info1,GL_CLAMP,GL_NEAREST,GL_NEAREST);
+	img2 = pngBind("da.png",PNG_NOMIPMAP,PNG_ALPHA,&info2,GL_CLAMP,GL_NEAREST,GL_NEAREST);
 
  	printf("img: id=%d,W=%d,H=%d,D=%d,A=%d",img1,info1.Width,info1.Height,info1.Depth,info1.Alpha);
 	printf("img: id=%d,W=%d,H=%d,D=%d,A=%d",img2,info2.Width,info2.Height,info2.Depth,info2.Alpha);
@@ -63,8 +63,8 @@ void Display(void)
 
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	w = glutGET(GLUT_WINDOW_WIDTH);
-	h = glutGET(GLUT_WINDOW_HEIGHT);
+	w = glutGet(GLUT_WINDOW_WIDTH);
+	h = glutGet(GLUT_WINDOW_HEIGHT);
 
 	x = random() % w;
 	y = random() % h;
@@ -87,7 +87,7 @@ void PutSprite(int num,int x,int y,pngInfo *info)
 	glPushMatrix();
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D,num);
-	glColor4ub(255,255,255,255);
+	glColor4ub(255,255,255,128);
 
 	glBegin(GL_QUADS);
 
