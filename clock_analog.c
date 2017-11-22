@@ -16,7 +16,7 @@ int main(int argc, char** argv)
 
   glutDisplayFunc(Display);
   glutReshapeFunc(Reshape);
-  glutInitDisplayMode(GLUT_RGBA);
+  glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE);
 
   glutTimerFunc(500,Timer,0);
 
@@ -60,7 +60,7 @@ void Display(void)
   glVertex2d(x + 150 * sin(rad_h),y - 150 * cos(rad_h));
   glEnd();
 
-  glFlush();
+  glutSwapBuffers();
 }
 
 void Reshape(int w, int h)
