@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <math.h>
 #include <time.h>
 #include <GL/glut.h>
-#include<GL/glpng.h>
+#include <GL/glpng.h>
 
 void Display(void);
 void Reshape(int, int);
@@ -25,7 +26,7 @@ int main(int argc, char** argv)
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glTexEnvf(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
 
-  img1 = pngBind("7375.png",PNG_NOMIPMAP,PNG_ALPHA,&info1,GL_CLAMP,GL_NEAREST,GL_NEAREST);
+  img1 = pngBind("mojiban.png",PNG_NOMIPMAP,PNG_ALPHA,&info1,GL_CLAMP,GL_NEAREST,GL_NEAREST);
   eye1 = pngBind("eye1.png",PNG_NOMIPMAP,PNG_ALPHA,&info_eye1,GL_CLAMP,GL_NEAREST,GL_NEAREST);
   eye2 = pngBind("eye2.png",PNG_NOMIPMAP,PNG_ALPHA,&info_eye2,GL_CLAMP,GL_NEAREST,GL_NEAREST);
 
