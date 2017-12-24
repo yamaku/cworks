@@ -8,13 +8,15 @@ void Display(void);
 void Reshape(int,int);
 void Timer(int);
 void PutSprite(int,int,int,pngInfo *);
+void Mouse(int,int,int,int);
+void Keyboard(unsigned char,int,int);
 void MakeMap();
 
-GLuint img[11];
-pngInfo info[11];
+GLuint img[12],button[4],ex;
+pngInfo info[12],binfo[4],einfo;
 char map[100][100];
 int size=10,px=0,py=32;
-int count=0;
+int count=0,p=0;
 
 
 #define KABE 'E'
@@ -24,10 +26,10 @@ int count=0;
 #define BOMB 'C'
 #define GRASS 'A'
 #define WARP 'D'
-#define HIGASHI 'H'
-#define MINAMI 'F'
-#define NISHI 'I'
-#define KITA 'G'
+#define HIGASHI 'F'
+#define MINAMI 'G'
+#define NISHI 'H'
+#define KITA 'I'
 
 int main(int argc,char **argv)
 {
@@ -36,7 +38,7 @@ int main(int argc,char **argv)
 
 	srandom(12345);
 	glutInit(&argc,argv);
-	glutInitWindowSize(320,320);
+	glutInitWindowSize(320,360);
 	glutCreateWindow("PNGfile");
 	glutInitDisplayMode(GLUT_RGBA|GLUT_ALPHA);
 	glClearColor(0.0,0.0,0.0,0.0);
@@ -45,15 +47,25 @@ int main(int argc,char **argv)
 	glBlendFunc(GL_SRC_ALPHA,GL_ONE_MINUS_SRC_ALPHA);
 	glTexEnvf(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
 
-	for(i=1;i<12;i++) //画像の取り込み
+	for(i=1;i<13;i++) //画像の取り込み
 	{
-		sprintf(fname,"part%02d.png",i);
+		sprintf(fname,"part%1d.png",i);
 		img[i] = pngBind(fname,PNG_NOMIPMAP,PNG_ALPHA,&info[i],GL_CLAMP,GL_NEAREST,GL_NEAREST);
 	}
+
+	for(i=1;i<4;i++)
+	{
+		sprintf(fname,"button%d.png",i);
+		button[i] = pngBind(fname,PNG_NOMIPMAP,PNG_ALPHA,&binfo[i],GL_CLAMP,GL_NEAREST,GL_NEAREST);
+	}
+
+	ex = pngBind("exit.png",PNG_NOMIPMAP,PNG_ALPHA,&einfo,GL_CLAMP,GL_NEAREST,GL_NEAREST);
 
 	glutDisplayFunc(Display);
 	glutReshapeFunc(Reshape);
 	glutTimerFunc(500,Timer,0);
+	glutMouseFunc(Mouse);
+	glutKeyboardFunc(Keyboard);
 	MakeMap();
 
 	glutMainLoop();
@@ -96,9 +108,56 @@ void Display(void)
 		y+=32;
 	}
 
-	if(count%4) PutSprite(img[6],px,py,&info[6]);
+
+	PutSprite(img[p%4+6],px,py,&info[p%4+6]);
+
+	for(i=0;i<3;i++)
+	{
+		PutSprite(button[i+1],i*32+96+i*2,323,&binfo[i+1]);
+	}
+
+	PutSprite(ex,200,323,&einfo);
 
 	glFlush();
+}
+
+void Mouse(int s,int b,int x,int y)
+{
+	if(s==GLUT_LEFT_BUTTON)
+	{
+		if(b==GLUT_UP)
+		{
+			if(y>323&&y<357)
+			{
+				if(x>96&&x<128) p++;
+				else if(x>130&&x<162) p+=3;
+				else if(x>164&&x<196)
+				{
+					switch (p%4)
+					{
+						case 0:
+							if(px!=256&&map[py/32][(px+32)/32]!=KABE)px+=32;
+							break;
+						case 1:
+							if(py!=256&&px!=0&&map[(py+32)/32][(px)/32]!=KABE)py+=32;
+							break;
+						case 2:
+							if(px>32&&map[py/32][(px-32)/32]!=KABE)px-=32;
+							break;
+						case 3:
+							if(py!=32&&map[(py-32)/32][(px)/32]!=KABE)py-=32;
+							break;
+					}
+				}
+			}
+		}
+	}
+	glutPostRedisplay();
+}
+
+void Keyboard(unsigned char key,int x,int y)
+{
+	if(key=='q') exit(0);
 }
 
 void PutSprite(int num,int x,int y,pngInfo *info)
